@@ -1,0 +1,10 @@
+#!/bin/sh
+test=1
+time=0
+while [ "${test}" == "1" ]
+do
+	netstat -a | grep 9877 
+	sleep 1
+	time=$(($time+1)) 
+	echo ${time}
+done

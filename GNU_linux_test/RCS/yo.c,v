@@ -1,0 +1,48 @@
+head	1.2;
+access;
+symbols;
+locks
+	liu:1.1
+	liu:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	2012.09.18.14.46.16;	author liu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2012.09.18.14.42.10;	author liu;	state Exp;
+branches;
+next	;
+
+
+desc
+@Source code file to demo basic `RCS usage.
+@
+
+
+1.2
+log
+@add the newline
+@
+text
+@#include<stdio.h>
+
+int main(void){
+	printf("nihao\n");
+	return 0;
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+	printf("nihao"\n);
+@

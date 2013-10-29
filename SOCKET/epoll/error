@@ -1,0 +1,18 @@
+/tmp/ccABkjCy.o: In function `main':
+epoll.c:(.text+0x17): undefined reference to `Epoll_create'
+epoll.c:(.text+0x33): undefined reference to `Socket'
+epoll.c:(.text+0x97): undefined reference to `Bind'
+epoll.c:(.text+0xab): undefined reference to `Listen'
+epoll.c:(.text+0xdc): undefined reference to `Epoll_ctl'
+epoll.c:(.text+0x106): undefined reference to `Epoll_wait'
+epoll.c:(.text+0x162): undefined reference to `Accept'
+epoll.c:(.text+0x1a2): undefined reference to `Inet_ntop'
+epoll.c:(.text+0x1eb): undefined reference to `Epoll_ctl'
+epoll.c:(.text+0x295): undefined reference to `Close'
+epoll.c:(.text+0x2d1): undefined reference to `error_quit'
+epoll.c:(.text+0x2ec): undefined reference to `Close'
+epoll.c:(.text+0x34a): undefined reference to `Epoll_ctl'
+epoll.c:(.text+0x3bd): undefined reference to `Writen'
+epoll.c:(.text+0x3ee): undefined reference to `Epoll_ctl'
+collect2: ld returned 1 exit status
+make: *** [epoll] Error 1
