@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1358938623 source:/home/Og/Pro/CPro/Code::Blocks/test/main.c
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+

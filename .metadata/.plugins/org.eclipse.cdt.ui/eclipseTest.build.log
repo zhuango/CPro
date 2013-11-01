@@ -1,0 +1,6 @@
+09:21:49 **** Build of configuration Build (GNU) for project eclipseTest ****
+make all 
+make: *** 没有规则可以创建目标“all”。 停止。
+
+09:21:50 Build Finished (took 679ms)
+
