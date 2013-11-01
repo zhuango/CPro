@@ -1,0 +1,17 @@
+server:server_udp.c	dg_echo.c
+	gcc server_udp.c dg_echo.c -o server
+client:client_udp.c dg_cli.c
+	gcc client_udp.c dg_cli.c -o client
+client_conn:client_udp.c dg_cli_conn.c
+	gcc client_udp.c dg_cli_conn.c -o client_conn
+client_test:client_udp.c dg_cli_test.c
+	gcc client_udp.c dg_cli_test.c -o client_test
+server_count:server_udp.c	dg_echo_count.c
+	gcc server_udp.c dg_echo_count.c -o server_count
+server_count_buf:server_udp.c	dg_echo_count_buf.c
+	gcc server_udp.c dg_echo_count_buf.c -o server_count_buf
+server_select:server_select.c str_echo.c
+	gcc server_select.c str_echo.c -o server_select 
+.PHONY:clean
+clean:	
+	rm server client client_conn client_test server_count server_count_buf server_select

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1369059325 source:/home/Og/Pro/CPro/Code::Blocks/merge/main.c
+	<stdio.h>
+	<stdlib.h>
+	<fcntl.h>
+

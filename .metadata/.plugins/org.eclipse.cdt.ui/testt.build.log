@@ -1,0 +1,6 @@
+10:32:07 **** Incremental Build of configuration Build (GNU) for project testt ****
+make all 
+make: *** 没有规则可以创建目标“all”。 停止。
+
+10:32:08 Build Finished (took 487ms)
+

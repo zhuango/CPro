@@ -1,0 +1,1 @@
+cmd_/home/Og/Pro/CPro/KernelModules/LDD/scull_b/scull.o := ld -m elf_i386   -r -o /home/Og/Pro/CPro/KernelModules/LDD/scull_b/scull.o /home/Og/Pro/CPro/KernelModules/LDD/scull_b/main.o /home/Og/Pro/CPro/KernelModules/LDD/scull_b/pipe.o /home/Og/Pro/CPro/KernelModules/LDD/scull_b/access.o ; scripts/mod/modpost /home/Og/Pro/CPro/KernelModules/LDD/scull_b/scull.o

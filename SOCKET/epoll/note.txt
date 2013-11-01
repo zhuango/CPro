@@ -1,0 +1,9 @@
+epoll函数可以创建一个epoll实例集合，该集合是epoll_create()函数调用返回的。
+epoll_event结构用来描述每个文件描述符的数值、监测的事件类型。
+注册过程是由epoll_ctl函数来完成，具体描述为在epoll实例集合上注册或者注销一个文件描述符、并且需要一个epoll_event结构来描述这个文件描述符的事件信息,epoll_wait 调用完毕会把发生事件的文件描述符的信息存在epoll_event结构中。
+调用epoll_wait函数来等待所要监听的文件描述符的事件，有LT、ET模式。
+
+Edge-Triggered(ET)模式：是由不可读变为可读、不可写变为可写的时候才会结束epoll_wait函数，假如读端只读取缓冲区中2k数据中的1k，然后循环从头开始再次执行epoll_wait函数时会阻塞，因为监听的描述符是否可读写状态没有发生变化。
+
+Level-Triggered(LT)模式：只要监听的文件描述符有可读或者可写的就终止wait。
+
