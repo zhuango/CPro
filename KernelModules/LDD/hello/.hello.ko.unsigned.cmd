@@ -1,1 +1,0 @@
-cmd_/home/Og/Pro/CPro/KernelModules/LDD/hello/hello.ko.unsigned := ld -r -m elf_i386 -T /usr/src/kernels/2.6.32-279.el6.i686/scripts/module-common.lds --build-id -o /home/Og/Pro/CPro/KernelModules/LDD/hello/hello.ko.unsigned /home/Og/Pro/CPro/KernelModules/LDD/hello/hello.o /home/Og/Pro/CPro/KernelModules/LDD/hello/hello.mod.o 

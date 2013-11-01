@@ -1,1 +1,0 @@
-cmd_/home/og/Pro/CPro/KernelModule/LDD/hello3/hello.ko := ld -r -m elf_i386 -T /usr/src/kernels/3.1.0-7.fc16.i686/scripts/module-common.lds --build-id  -o /home/og/Pro/CPro/KernelModule/LDD/hello3/hello.ko /home/og/Pro/CPro/KernelModule/LDD/hello3/hello.o /home/og/Pro/CPro/KernelModule/LDD/hello3/hello.mod.o
