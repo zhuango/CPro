@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<sys/stat.h>
+#include"fifo.h"
+
+int main(int argc, char *argv[])
+{
+	int 	readfd, writefd;
+
+	if((mkfifo(FIFO1, 0644) < 0) && (errno == EEXIST)){
+		perror("mkfifo1");
+		exit(EXIT_FAILURE);
+	}
+	if((mkfifo(FIFO2, 0644) < 0) && (errno == EEXIST)){
+		unlink(FIFO1);
+		perror("mkfifo2");
+		exit(EXIT_FAILURE);
+	}
+
+	readfd = Open(FIFO1, O_RDONLY, 0);
+	writefd = Open(FIFO2, O_WRONLY, 0);
+
+	server

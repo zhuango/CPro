@@ -2,6 +2,10 @@
 #include<stdlib.h>
 #include<strings.h>
 #include<sys/socket.h>
+<<<<<<< HEAD
+=======
+#include<arpa/inet.h>
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 #include<netinet/in.h>
 #include<signal.h>
 #include<errno.h>
@@ -23,7 +27,12 @@ int main(void)
 	bzero(&serveraddr, 0);/* clear the server address struct */
 	/* set the protrcl IPaddress port number */
 	serveraddr.sin_family = AF_INET;
+<<<<<<< HEAD
 	serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
+=======
+//	serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	inet_pton(AF_INET, "0.0.0.0",  &serveraddr.sin_addr);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	serveraddr.sin_port = htons(9877);
 
 	/* bind the socket and IPaddress */

@@ -21,6 +21,10 @@ int main(int argc, char *argv[])
 	bzero(&serveraddr, 0);
 	serveraddr.sin_family = AF_INET;
 	serveraddr.sin_port = htons(9877);
+<<<<<<< HEAD
+=======
+	
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	if(inet_pton(AF_INET, argv[1], &serveraddr.sin_addr) < 0){
 		perror("inet_pton");
 		exit(EXIT_FAILURE);
@@ -30,6 +34,10 @@ int main(int argc, char *argv[])
 		perror("connect");
 		exit(EXIT_FAILURE);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	str_cli(stdin, sockfd);
 
 	if(close(sockfd) < 0){

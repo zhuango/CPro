@@ -1,0 +1,4 @@
+a write to stoutbefore fork
+pid = 6305, glob = 7, var = 89
+before fork
+pid = 6304, glob = 6, var = 88

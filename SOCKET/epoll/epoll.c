@@ -5,7 +5,11 @@
 #include<netinet/in.h>
 #include<string.h>
 #include<errno.h>
+<<<<<<< HEAD
 
+=======
+#include <arpa/inet.h>
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 #define SERV_PORT 9877
 #define MAXLINE 512
 #define LISTENQ 5
@@ -41,7 +45,11 @@ int main(void)
   
     //设置与要处理的事件相关的文件描述符和事件  
     ev.data.fd = listenfd;    
+<<<<<<< HEAD
     ev.events = EPOLLIN|EPOLLET;    
+=======
+    ev.events = EPOLLIN|EPOLLET;//epoll in && epoll et modole 
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
   
     //注册epoll事件    
     epoll_ctl(epfd, EPOLL_CTL_ADD, listenfd,&ev);    
@@ -52,7 +60,12 @@ int main(void)
         //等待epoll事件的发生    
         //返回需要处理的事件数目nfds，如返回0表示已超时。    
         nfds = epoll_wait(epfd, events, 20, 500);    
+<<<<<<< HEAD
   
+=======
+ printf("NmafearLIuZHuang\n");
+
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
         //处理所发生的所有事件    
         for(i=0; i < nfds; ++i)    
         {    

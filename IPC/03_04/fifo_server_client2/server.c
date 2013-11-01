@@ -16,7 +16,11 @@ void server(int readfd, int writefd)
 	}
 	buff[n] = 0;
 
+<<<<<<< HEAD
 	if((filefd = open(buff, O_RDONLY, 0)) < 0){
+=======
+	if((filefd = open(buff, O_RDONLY)) < 0){
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 		perror("open");
 		exit(EXIT_FAILURE);
 	}

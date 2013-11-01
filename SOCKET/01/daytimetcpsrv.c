@@ -76,7 +76,11 @@ int main(void)
 	bzero(&servaddr, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;/* set the family */
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);/* receive all address client */
+<<<<<<< HEAD
 	servaddr.sin_port = htons(3333);	/* set the portnumber */
+=======
+	servaddr.sin_port = htons(9877);	/* set the portnumber */
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 
 	/* bind the sockfd snd the address */
 	Bind(listenfd, (struct sockaddr *)&servaddr, sizeof(servaddr));

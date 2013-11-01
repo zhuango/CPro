@@ -68,6 +68,7 @@ node *insertA(node *head, type x, type y)
 	new->data = x;
 
 	while(index != NULL) {
+<<<<<<< HEAD
 		if(index->data == y) {
 			head = delete(head, x);
 			if(index == head) {
@@ -77,6 +78,11 @@ node *insertA(node *head, type x, type y)
 				head = new;
 				return head;
 			}
+=======
+		if(index->data == y) {	
+			head = delete(head, x);
+
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 			index->pre->next = new;
 			new->pre = index->pre;
 
@@ -98,6 +104,7 @@ node *insertB(node *head, type x, type y)
 	while(index != NULL) {
 		if(index->data == y) {
 			head = delete(head, x);
+<<<<<<< HEAD
 			if(index->next == NULL) {
 				index->next = new;
 				new->pre = index;
@@ -107,6 +114,12 @@ node *insertB(node *head, type x, type y)
 
 			index->next->pre = new;
 			new->next = index->next;
+=======
+
+			index->next->pre = new;
+			new->next = index->next;
+			
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 			new->pre = index;
 			index->next = new;
 			return head;
@@ -124,10 +137,16 @@ int main()
 	char cmd;
 	int n, m, i, x, y;
 
+<<<<<<< HEAD
 
 	scanf("%d %d", &n, &m);
 	for(i = n - 1; i >= 0; i--)
 		head = link(head, i + 1);
+=======
+	scanf("%d %d", &n, &m);
+	for(i = n + 1; i >= 0; i--)
+		head = link(head, i);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 
 	for(i = 0; i < m; i++) {
 		while(getchar() != '\n') {}
@@ -136,8 +155,13 @@ int main()
 		if(cmd == 'B') head = insertB(head, x, y);
 	}
 
+<<<<<<< HEAD
 	index = head;
 	while(index != NULL) {
+=======
+	index = head->next;
+	while(index->data != n + 1) {
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 		printf("%d ", index->data);
 		index = index->next;
 	}

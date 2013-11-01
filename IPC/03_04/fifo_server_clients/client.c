@@ -16,16 +16,23 @@ int main(int argc, char *argv[])
 	ssize_t	n;
 	char *ptr, fifoname[MAXLINE], buff[MAXLINE];
 	pid_t pid;
+<<<<<<< HEAD
 	
 	/* Get the child pid */
 	pid = getpid();
 	/* Get a fifo name */
 	snprintf(fifoname, sizeof(fifoname), "/tmp/fifo.%ld", (long)pid);
 	/* Create a fifo named with pid number */
+=======
+
+	pid = getpid();
+	snprintf(fifoname, sizeof(fifoname), "/tmp/fifo.%ld", (long)pid);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	if((mkfifo(fifoname, 0644) < 0) && (errno != EEXIST)){
 		perror("mkfifo");
 		exit(EXIT_FAILURE);
 	}
+<<<<<<< HEAD
 	/* Put pid into string with ' ' to sepreate from filename */
 	snprintf(buff, sizeof(buff), "%ld ", (long)pid);
 	len = strlen(buff);
@@ -38,12 +45,25 @@ int main(int argc, char *argv[])
 	writefifo = Open(FIFO1, O_WRONLY, 0);
 	Write(writefifo, buff, len);
 	/* Recvive data */
+=======
+	snprintf(buff, sizeof(buff), "%ld ", (long)pid);
+	len = strlen(buff);
+	ptr = buff + len;
+	Fgets(ptr, MAXLINE - len, stdin);
+	len = strlen(buff);
+
+	writefifo = Open(FIFO1, O_WRONLY, 0);
+	Write(writefifo, buff, len);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	readfifo = Open(fifoname, O_RDONLY, 0);
 
 	while((n = Read(readfifo, buff, MAXLINE)) > 0){
 		Write(STDOUT_FILENO, buff, n);
 	}
+<<<<<<< HEAD
 	/* Close and unlink */
+=======
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	Close(readfifo);
 	Unlink(fifoname);
 	exit(EXIT_SUCCESS);

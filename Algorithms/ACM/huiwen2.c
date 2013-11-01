@@ -41,7 +41,11 @@ int main(void)
 			}
 		}
 	}
+<<<<<<< HEAD
 	printf("%d\n",max);
+=======
+
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	for(i = x; i <= y; i++)
 		printf("%c", buf[i]);
 	printf("\n");

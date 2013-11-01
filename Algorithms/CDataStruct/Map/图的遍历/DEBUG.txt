@@ -1,0 +1,39 @@
+[DEBUG]
+
+2
+8
+a b c d e f g h
+14
+a b
+a c
+a e
+
+
+a f
+a g
+a h
+b d
+b e
+b h
+c g
+c h
+d h
+e f
+f g
+ 
+a-h a-g a-f a-e a-c a-b
+b-h b-e b-d
+c-h c-g
+d-h
+e-f
+f-g
+
+
+0 a-h a-g a-f a-e a-c a-b
+1 b-h b-e b-d b-a
+2 c-h c-g c-a 
+3 d-h d-b                        3 7 = 1
+4 e-f e-b e-a 
+5 f-g f-e f-a
+6 g-f g-c g-a
+7 h-d h-c h-b h-a

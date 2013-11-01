@@ -18,7 +18,11 @@ int main(void)
 
 	client(readid, writeid);
 
+<<<<<<< HEAD
 //	Msgctl(readid, IPC_RMID, NULL);
+=======
+	Msgctl(readid, IPC_RMID, NULL);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 
 	exit(EXIT_SUCCESS);
 }

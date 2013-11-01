@@ -47,11 +47,20 @@ int main(int argc, char *argv[])
 	}
 	snprintf(command, sizeof(command), "cat %s", buff);/* print the commanf to value command */
 	fp = Popen(command, "r");/* create a new process
+<<<<<<< HEAD
 				and create pipe type is read, the new process's stdout is pointer to pipe's write*/
 
 	//while(Fgets(buff, MAXLINE, fp) != NULL){/* get info from pipe */
 //		Fputs(buff, stdout);/* print to stdout */
 //	}
+=======
+								and create pipe 
+								type is read,the process's stdout is pointer to pipe's write*/
+
+	while(Fgets(buff, MAXLINE, fp) != NULL){/* get info from pipe */
+		Fputs(buff, stdout);/* print to stdout */
+	}
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	Pclose(fp);/* close IO and wait for the child process */
 
 	exit(EXIT_FAILURE);

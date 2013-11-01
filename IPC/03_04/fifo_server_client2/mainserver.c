@@ -18,8 +18,13 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+<<<<<<< HEAD
 	readfd = open(FIFO1, O_RDONLY, 0);
 	writefd = open(FIFO2, O_WRONLY, 0);
+=======
+	readfd = Open(FIFO1, O_RDONLY);
+	writefd = Open(FIFO2, O_WRONLY);
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 
 	server(readfd, writefd);
 

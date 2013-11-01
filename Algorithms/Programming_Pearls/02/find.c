@@ -2,14 +2,25 @@
 #include<stdlib.h>
 
 int the_one = 0x00000000;
+<<<<<<< HEAD
 int mask = 0x40000000;
 int bit = 32;
+=======
+int bit = 31;
+int mask = 0x00000001;
+
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 int main(void)
 {
 	int n, num1 = 0, num2 = 0, count;
 	FILE *a1, *a2, *file, *a3;
 	a3 = stdin;
 	
+<<<<<<< HEAD
+=======
+	mask = 0x00000001 << (bit - 1);
+	
+>>>>>>> b377d5b6d37e1e0791c3b0af7035f3dc99c42dd4
 	for(count = 0; count < bit; count++){
 		/* Open first file to save the smaller number*/
 		if((a1 = fopen("a1", "w+")) == NULL){
