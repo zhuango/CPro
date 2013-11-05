@@ -14,22 +14,23 @@ void max_heapify(int array[],int num, int father);	/* make the father be a root 
 void build_max_heap(int array[], int num);			/* build a max heap */
 
 /* get the left child */
-inline int LEFT(int father){
+inline int LEFT(int father) {
 	return 2*father+1;
 }
 /* get the right child */
-inline int RIGHT(int father){
+inline int RIGHT(int father) {
 	return 2*father+2;
 }
 
 int main(void)
 {
 	int i;/* use to print sort array */
-	int array[NUM] = {12,33,42,4,234,435,23,5,53,1};
+	//int array[NUM] = {12,33,42,4,234,435,23,5,53,1};
+	int array[NUM] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	heap_sort(array, NUM);/* begin to sort */
 
 	/* print the array */
-	for(i = 0; i < NUM; i++){
+	for(i = 0; i < NUM; i++) {
 		printf("%d ",array[i]);
 	}
 	printf("\n");
@@ -51,7 +52,7 @@ void heap_sort(int array[], int num)
 {
 	int i;
 	build_max_heap(array, num);/* build the max heap */
-	for(i = num - 1; i > 0; i--){
+	for(i = num - 1; i > 0; i--) {
 		/* swap the biggest and the root */
 		array[0] = array[0] + array[i];
 		array[i] = array[0] - array[i];
@@ -86,7 +87,7 @@ void max_heapify(int array[], int num, int father)
 		largest = right;
 
 	/* father change! swap the element and go on */
-	if(largest != father){
+	if(largest != father) {
 		array[father]  = array[largest] + array[father];
 		array[largest] = array[father]  - array[largest];
 		array[father]  = array[father]  - array[largest];
@@ -106,7 +107,8 @@ void build_max_heap(int array[], int num)
 	heap_size = num;
 
 	/* make each father bigger than his child */
-	for(position = num/2 - 1; position >= 0; position --){
+	/* Begin with the last node's father node(num/2 - 1) */
+	for(position = num/2 - 1; position >= 0; position --) {
 		max_heapify(array, num, position);
 	}
 }

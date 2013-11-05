@@ -54,7 +54,8 @@ int partition(int array[], int first, int end)
 	int each_ele = 0;		/* go through array */
 	int tmp;				/* use to swap number */
 
-	for(each_ele = first; each_ele < end; each_ele++) {
+	for(each_ele = first; each_ele < end; each_ele++)
+	{
 		if(array[each_ele] <= middle){/* less than midlle? */
 			/* swap the number */
 			mid_pos++;
