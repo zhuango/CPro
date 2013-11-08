@@ -18,12 +18,12 @@ void max_heapify(int array[], int heap_size, int father)
 	left = Left(father);
 	right= Right(father);
 
-	if(left < heap_size && array[left] > array[father])
+	if(left <= heap_size && array[left] > array[father])
 		largest = left;
 	else
 		largest = father;
 
-	if(right < heap_size && array[right] > array[largest])
+	if(right <= heap_size && array[right] > array[largest])
 		largest = right;
 
 	if(largest != father) {
@@ -40,7 +40,7 @@ void build_max_heap(int array[], int num)
 	for(i = num / 2; i > 0; i--)
 		max_heapify(array, heap_size, i);
 }
-heap_sort(int array[], int num)
+void heap_sort(int array[], int num)
 {
 	int i;
 	int tmp;
