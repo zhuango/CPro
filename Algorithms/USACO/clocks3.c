@@ -1,3 +1,8 @@
+/*
+ID: og192li1
+LANG: C
+PROG: clocks
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
