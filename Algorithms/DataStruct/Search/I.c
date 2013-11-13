@@ -4,7 +4,6 @@
 #include<sys/time.h>
 
 #define NUM 2000000
-
 void Interpolation(int array[], int num, int k)
 {
 	int s = 0, e = num + 1;
