@@ -73,9 +73,11 @@ int levorder(node *root)
 			queue[tail] = tmp->right;
 			tail = (tail + 1) % (MAX - 1);
 		}
-		/* Whole Tree? */	
-		if(tmp->right != NULL && tmp->left == NULL) WholeTree = 0;
-		if(tmp->right == NULL && tmp->left != NULL) {
+		/* Complate Tree? */	
+		if(tmp->right != NULL && tmp->left == NULL) WholeTree = 0;/* Has no left tree when it has right , not a complete tree */
+		if(tmp->right == NULL && tmp->left != NULL) {/* Has the left tree, has no right tree, 
+								then the node before this node must has both left and right.
+								if not, then noe a complete tree*/
 			i = head;
 			while(i != tail) {
 				if(queue[i]->right != NULL || queue[i]->left != NULL)
@@ -147,12 +149,16 @@ int main(void)
 	int t;
 
 	root = CreateBinTree('#');
+
+	printf("PreOrder: ");
 	preorder(root);
 	printf("\n");
-	
+
+	printf("InOrder: ");
 	inorder(root);
 	printf("\n");
-	
+
+	printf("PostOrder: ");
 	postorder(root);
 	printf("\n");
 

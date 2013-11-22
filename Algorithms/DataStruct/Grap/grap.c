@@ -25,7 +25,7 @@ Gra *CreateG()
 	Gra *G = malloc(sizeof(Gra));
 	/* Get size of grap nodes */
 	scanf("%d", &size);
-	/* Init the Gra struct  */
+	/* Init the Gra struct */
 	G->graphsize = size;
 	G->head = Head = malloc(sizeof(Vertex) * size);
 
