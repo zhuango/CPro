@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "AVLTree", "AVLTree\AVLTree.cproj", "{581F6C53-5CF9-49B6-84A4-27221BBA165C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{581F6C53-5CF9-49B6-84A4-27221BBA165C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581F6C53-5CF9-49B6-84A4-27221BBA165C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581F6C53-5CF9-49B6-84A4-27221BBA165C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581F6C53-5CF9-49B6-84A4-27221BBA165C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AVLTree\AVLTree.cproj
+	EndGlobalSection
+EndGlobal

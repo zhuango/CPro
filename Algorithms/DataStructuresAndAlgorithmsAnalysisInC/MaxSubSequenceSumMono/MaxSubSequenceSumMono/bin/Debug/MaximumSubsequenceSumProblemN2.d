@@ -1,0 +1,2 @@
+/home/zhuangliu/Git/CPro/Algorithms/DataStructuresAndAlgorithmsAnalysisInC/MaxSubSequenceSumMono/MaxSubSequenceSumMono/bin/Debug/MaximumSubsequenceSumProblemN2.o: \
+ /home/zhuangliu/Git/CPro/Algorithms/DataStructuresAndAlgorithmsAnalysisInC/MaxSubSequenceSumMono/MaxSubSequenceSumMono/MaximumSubsequenceSumProblemN2.c

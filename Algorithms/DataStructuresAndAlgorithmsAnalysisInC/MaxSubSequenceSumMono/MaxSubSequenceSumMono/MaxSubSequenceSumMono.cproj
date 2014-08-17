@@ -30,8 +30,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="main.c" />
-    <Compile Include="MaximumSubsequenceSumProblemN2.c" />
-    <Compile Include="MaximumSubsequenceSumProblemN3.c" />
+    <Compile Include="MaxSequenceSumNlogN.c" />
+    <Compile Include="MaximumSubsequenceSumN2.c" />
+    <Compile Include="MaximumSubsequenceSumN3.c" />
+    <Compile Include="MaxSequenceSumN.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MaxSequenceSumAlg.h" />

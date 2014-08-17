@@ -9,5 +9,9 @@ int main(void)
     printf("%d\n", result);
     result = MaxSubSequenceSumN3(array, 11);
     printf("%d\n", result);
+    MaxSequenceSumNlogN(array, 11);
+    printf("%d\n", result);
+    MaxSequenceSumN(array, 11);
+    printf("%d\n", result);
     exit(EXIT_SUCCESS);
 }

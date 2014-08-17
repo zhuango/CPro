@@ -24,7 +24,10 @@ void do_ls(char dirname[])
 		fprintf(stderr,"ls1: cannot open %s\n",dirname);
 	else{
 		while((direntp = readdir(dir_ptr)) != NULL)
+                {
 			printf("%s\n",direntp->d_name);
+                }
+
 		close(dir_ptr);
 	}
 

@@ -1,0 +1,17 @@
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MaxSubSequenceSumMono/main.c">
+    <Files>
+      <File FileName="MaxSubSequenceSumMono/main.c" Line="17" Column="2" />
+      <File FileName="MaxSubSequenceSumMono/MaximumSubsequenceSumN3.c" Line="1" Column="1" />
+      <File FileName="MaxSubSequenceSumMono/MaxSequenceSumAlg.h" Line="7" Column="41" />
+      <File FileName="MaxSubSequenceSumMono/MaximumSubsequenceSumN2.c" Line="5" Column="2" />
+      <File FileName="MaxSubSequenceSumMono/MaxSequenceSumNlogN.c" Line="49" Column="1" />
+      <File FileName="MaxSubSequenceSumMono/MaxSequenceSumN.c" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

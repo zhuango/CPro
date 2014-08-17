@@ -6,7 +6,7 @@ dir.o: dir.c
 file_read:file_read.o
 	gcc file_read.o -o file_read
 file_read.o:file_read.c
-	gcc -c file_read.c -o file_read
+	gcc -c file_read.c -o file_read.o
 
 file_get:file_get.o
 	gcc file_get.o -o file_get
