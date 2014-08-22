@@ -1,2 +1,4 @@
+TerminalPrefInvertColors=true
 eclipse.preferences.version=1
 mylyn.attention.migrated=true
+overriddenByCSS=,TerminalPrefInvertColors,

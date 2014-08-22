@@ -1,0 +1,15 @@
+10:57:35 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./graph.o   
+Finished building target: Graph
+ 
+
+10:57:37 Build Finished (took 2s.766ms)
+

@@ -1,0 +1,47 @@
+09:41:58 **** Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./graph.o   
+Finished building target: Graph
+ 
+09:42:06 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+10:56:46 **** Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+../graph.cpp: In function ‘Cell* GetCellWithZeroIndegree(Graph*)’:
+../graph.cpp:66:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < g->Cells.size(); i++)
+                                   ^
+../graph.cpp: In function ‘void TopoSortV2(Graph*)’:
+../graph.cpp:95:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < g->Cells.size(); i++)
+                                   ^
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./graph.o   
+Finished building target: Graph
+ 
+10:57:35 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./graph.o   
+Finished building target: Graph
+ 
