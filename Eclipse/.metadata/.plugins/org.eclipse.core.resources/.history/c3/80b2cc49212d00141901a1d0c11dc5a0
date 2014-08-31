@@ -1,0 +1,11 @@
+#ifndef _TABLE_H
+#define _TABLE_H
+#include "graph.h"
+struct Table
+{
+	bool Known;
+	int Distance;
+	Node *ParentNode;
+};
+
+#endif _TABLE_H

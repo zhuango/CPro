@@ -1,6 +1,5 @@
 TerminalPrefInvertColors=true
-activeuserprofiles=Team;liuzhuang;localhost
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=liuzhuang
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=zhuangliu
 overriddenByCSS=,TerminalPrefInvertColors,
-useridperkey=liuzhuang.Local\=liuzhuang;
+useridperkey=zhuangliu.Local\=zhuangliu;

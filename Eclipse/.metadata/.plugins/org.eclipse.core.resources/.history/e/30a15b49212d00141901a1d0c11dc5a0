@@ -1,0 +1,11 @@
+#ifndef _TABLE_H
+#define _TABLE_H
+
+struct Table
+{
+	bool Known;
+	int Distance;
+	Node *ParentNode;
+};
+
+#endif _TABLE_H

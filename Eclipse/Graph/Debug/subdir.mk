@@ -4,12 +4,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../ShortPathUnweighted.cpp \
+../ShortPathWeighted.cpp \
 ../graph.cpp 
 
 OBJS += \
+./ShortPathUnweighted.o \
+./ShortPathWeighted.o \
 ./graph.o 
 
 CPP_DEPS += \
+./ShortPathUnweighted.d \
+./ShortPathWeighted.d \
 ./graph.d 
 
 

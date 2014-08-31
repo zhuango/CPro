@@ -2,12 +2,14 @@
 #include <queue>
 #include "graph.h"
 
-template <class RealNameType, class IndexType>
-Node *InitializeNode(RealNameType name, IndexType index)
+map<string, UInt32> mapping;
+
+Node *InitializeNode(string name, Index index, Weight weight)
 {
 	Node *node = new Node;
 	node->RealName = name;
 	node->InternalNumber = index;
+	node->weight = weight;
 	return node;
 }
 
@@ -25,15 +27,15 @@ Graph *InitializeGraph()
 	int numberOfEdge = 0;
 	cin >> numberOfEdge;
 	string str1, str2;
+	Weight weight;
 	while(numberOfEdge)
 	{
-		cin >> str1 >> str2;
-
+		cin >> str1 >> str2 >> weight;
 		if(mapping.find(str1) == mapping.end())
 		{
 			mapping.insert(pair<string, UInt32>(str1, numberofVertex));
 
-			Node *node = InitializeNode(str1, numberofVertex);
+			Node *node = InitializeNode(str1, numberofVertex, 0);
 			Cell *cell = InitializeCell();
 			cell->CurrentNode = node;
 			graph->Cells.push_back(cell);
@@ -44,7 +46,7 @@ Graph *InitializeGraph()
 		{
 			mapping.insert(pair<string, UInt32>(str2, numberofVertex));
 
-			Node *node = InitializeNode(str2, numberofVertex);
+			Node *node = InitializeNode(str2, numberofVertex, 0);
 			Cell *cell = InitializeCell();
 			cell->CurrentNode = node;
 			graph->Cells.push_back(cell);
@@ -53,7 +55,7 @@ Graph *InitializeGraph()
 		}
 
 		map<string, UInt32>::iterator iter = mapping.find(str2);
-		graph->Cells[mapping.find(str1)->second - 1]->Children.push_back(InitializeNode(iter->first, iter->second));
+		graph->Cells[mapping.find(str1)->second - 1]->Children.push_back(InitializeNode(iter->first, iter->second, weight));
 		graph->Cells[mapping.find(str2)->second - 1]->Indegree ++;
 		numberOfEdge--;
 	}
@@ -65,7 +67,7 @@ Cell *GetCellWithZeroIndegree(Graph *g)
 {
 	for(UInt32 i = 0; i < g->Cells.size(); i++)
 	{
-		//Return only when indegree is 0 and hasn't get TopoNumber(TopoNumber == 0)
+		//Return only when in degree is 0 and hasn't get TopoNumber(TopoNumber == 0) yet.
 		if(g->Cells[i]->Indegree == 0 && g->Cells[i]->TopoNumber == 0)
 		{
 			return g->Cells[i];
@@ -84,7 +86,7 @@ void TopoSortV1(Graph *G)
 		list<Node *>::iterator iter = currentCell->Children.begin();
 		for(; iter != currentCell->Children.end(); iter++)
 		{
-			G->Cells[mapping.find(currentCell->CurrentNode->RealName)->second - 1]->Indegree --;
+			G->Cells[(*iter)->InternalNumber - 1]->Indegree --;
 		}
 	}
 }
@@ -122,17 +124,45 @@ void TopoSortV2(Graph *g)
 int main()
 {
 	Graph *graph = InitializeGraph();
-		for(UInt32 b = 0; b < graph->Cells.size(); b++)
+	for(UInt32 b = 0; b < graph->Cells.size(); b++)
+	{
+		cout << graph->Cells[b]->CurrentNode->RealName;
+        cout << graph->Cells[b]->CurrentNode->InternalNumber << "(" << graph->Cells[b]->Indegree << ")" << ": ";
+		for(list<Node*>::iterator iter = graph->Cells[b]->Children.begin();
+				iter != graph->Cells[b]->Children.end(); iter++)
 		{
-            cout << graph->Cells[b]->CurrentNode->RealName;
-            cout << graph->Cells[b]->CurrentNode->InternalNumber << ": ";
-            cout << graph->Cells[b]->Indegree;
-			for(list<Node*>::iterator iter = graph->Cells[b]->Children.begin();
-					iter != graph->Cells[b]->Children.end(); iter++)
-			{
-				cout << (*iter)->RealName << " ";
-				cout << (*iter)->InternalNumber << "->";
-			}
-			cout << endl;
+			cout << (*iter)->RealName << " ";
+			cout << (*iter)->InternalNumber << "->";
 		}
+		cout << endl;
+	}
+	//TopoSortV1(graph);
+	TopoSortV2(graph);
+	for(UInt32 i = 0; i < graph->Size; i++)
+	{
+		cout << graph->Cells[i]->CurrentNode->RealName<< ": " <<  graph->Cells[i]->TopoNumber << endl;
+	}
+
+	for(UInt32 b = 0; b < graph->Cells.size(); b++)
+	{
+		cout << graph->Cells[b]->CurrentNode->RealName;
+        cout << graph->Cells[b]->CurrentNode->InternalNumber << "(" << graph->Cells[b]->Indegree << ")" << ": ";
+		for(list<Node*>::iterator iter = graph->Cells[b]->Children.begin();
+				iter != graph->Cells[b]->Children.end(); iter++)
+		{
+			cout << (*iter)->RealName << " ";
+			cout << (*iter)->InternalNumber << "->";
+		}
+		cout << endl;
+	}
+
+	Table *table = new Table[graph->Size];
+	InitTable(table, graph->Size);
+	//ShortPathUnweighted(table, graph, graph->Cells[0]->CurrentNode);
+	ShortPathUnweighted(table, graph, graph->Cells[0]->CurrentNode);
+	cout << "we will find distance of every node from node: " << graph->Cells[0]->CurrentNode->RealName << endl;
+	for(UInt32 i = 0; i < graph->Size; i++)
+	{
+		cout << "Distance from " << graph->Cells[i]->CurrentNode->RealName << " : " << table[i].Distance << endl;
+	}
 }

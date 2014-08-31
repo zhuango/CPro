@@ -1,0 +1,41 @@
+#include "BinaryHeap.h"
+#include "graph.h"
+#include <stack>
+
+#ifndef DIJKSTRA_H
+#define DIIKSTRA_H
+
+#define VertexNumber 7
+#define NotAVertex (-1);
+#define Infinity 0x8FFFFFFF
+
+struct TableEntry
+{
+	bool Known;
+	Weight Dist;
+	Index Parent;
+};
+
+typedef struct TableEntry Table[VertexNumber];
+
+#endif
+
+void InintTable(Index start, Graph *g, Table t)
+{
+	for(UInt32 i =0; i < g->Size; i++)
+	{
+		t[i].Known = false;
+		t[i].Dist = Infinity;
+		t[i].Parent = NotAVertex;
+	}
+	t[start].Dist = 0;
+}
+
+void PrintPath(Index destNode, Table t)
+{
+	stack<Index> pathStack;
+	while(t[destNode].Parent != NotAVertex)
+	{
+		pathStack.push_back(t[destNode].Parent);
+	}
+}

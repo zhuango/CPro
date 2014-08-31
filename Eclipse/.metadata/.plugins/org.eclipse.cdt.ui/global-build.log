@@ -1,5 +1,17 @@
-09:41:58 **** Build of configuration Debug for project Graph ****
+21:38:58 **** Incremental Build of configuration Debug for project Graph ****
 make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:17:58: warning: for increment expression has no effect [-Wunused-value]
+  for(currentDistance = 0; currentDistance < graph->Size; currentDistance)
+                                                          ^
+../ShortPathUnweighted.cpp:22:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
 Building file: ../graph.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
@@ -7,33 +19,60 @@ Finished building: ../graph.cpp
  
 Building target: Graph
 Invoking: GCC C++ Linker
-g++  -o "Graph"  ./graph.o   
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
 Finished building target: Graph
  
-09:42:06 **** Incremental Build of configuration Debug for project Graph ****
+21:39:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:22:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../graphTopoSort.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graphTopoSort.d" -MT"graphTopoSort.d" -o "graphTopoSort.o" "../graphTopoSort.cpp"
+../graphTopoSort.cpp: In function ‘Graph* InitializeGraph()’:
+../graphTopoSort.cpp:31:6: error: ‘mapping’ was not declared in this scope
+   if(mapping.find(str1) == mapping.end())
+      ^
+../graphTopoSort.cpp:42:6: error: ‘mapping’ was not declared in this scope
+   if(mapping.find(str2) == mapping.end())
+      ^
+../graphTopoSort.cpp:54:40: error: ‘mapping’ was not declared in this scope
+   map<string, UInt32>::iterator iter = mapping.find(str2);
+                                        ^
+make: *** [graphTopoSort.o] Error 1
+21:40:08 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:40:12 **** Incremental Build of configuration Debug for project Graph ****
 make all 
 make: Nothing to be done for `all'.
-10:56:46 **** Build of configuration Debug for project Graph ****
+21:41:02 **** Incremental Build of configuration Debug for project Graph ****
 make all 
 Building file: ../graph.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
-../graph.cpp: In function ‘Cell* GetCellWithZeroIndegree(Graph*)’:
-../graph.cpp:66:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i = 0; i < g->Cells.size(); i++)
-                                   ^
-../graph.cpp: In function ‘void TopoSortV2(Graph*)’:
-../graph.cpp:95:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i = 0; i < g->Cells.size(); i++)
-                                   ^
 Finished building: ../graph.cpp
  
 Building target: Graph
 Invoking: GCC C++ Linker
-g++  -o "Graph"  ./graph.o   
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
 Finished building target: Graph
  
-10:57:35 **** Incremental Build of configuration Debug for project Graph ****
+21:41:09 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+21:42:32 **** Incremental Build of configuration Debug for project Graph ****
 make all 
 Building file: ../graph.cpp
 Invoking: GCC C++ Compiler
@@ -42,6 +81,1663 @@ Finished building: ../graph.cpp
  
 Building target: Graph
 Invoking: GCC C++ Linker
-g++  -o "Graph"  ./graph.o   
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:42:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+21:43:59 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:44:04 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+21:44:28 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:44:31 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+21:45:06 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:54:47 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:24:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:55:29 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:24:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:56:03 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:24:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:05:13 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:25:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:60:100: error: no match for ‘operator+’ (operand types are ‘Table’ and ‘int’)
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                    ^
+../ShortPathUnweighted.cpp:60:100: note: candidates are:
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/vector:60,
+                 from ../graph.h:4,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/stl_iterator.h:333:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^
+/usr/include/c++/4.8/bits/stl_iterator.h:333:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/vector:65:0,
+                 from ../graph.h:4,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/stl_bvector.h:293:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_iterator& __x)
+   ^
+/usr/include/c++/4.8/bits/stl_bvector.h:293:3: note:   no known conversion for argument 1 from ‘Table’ to ‘std::ptrdiff_t {aka long int}’
+/usr/include/c++/4.8/bits/stl_bvector.h:379:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_const_iterator& __x)
+   ^
+/usr/include/c++/4.8/bits/stl_bvector.h:379:3: note:   no known conversion for argument 1 from ‘Table’ to ‘std::ptrdiff_t {aka long int}’
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../graph.h:5,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:2365:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2365:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   ‘Table’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/string:53:0,
+                 from ../graph.h:5,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.tcc:692:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:692:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   mismatched types ‘const _CharT*’ and ‘Table’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/string:53:0,
+                 from ../graph.h:5,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.tcc:708:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^
+/usr/include/c++/4.8/bits/basic_string.tcc:708:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   mismatched types ‘const std::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../graph.h:5,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:2402:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2402:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   ‘Table’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../graph.h:5,
+                 from ../ShortPathUnweighted.cpp:1:
+/usr/include/c++/4.8/bits/basic_string.h:2418:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2418:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   ‘Table’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+In file included from /usr/include/c++/4.8/deque:64:0,
+                 from /usr/include/c++/4.8/queue:60,
+                 from ../ShortPathUnweighted.cpp:2:
+/usr/include/c++/4.8/bits/stl_deque.h:354:5: note: template<class _Tp, class _Ref, class _Ptr> std::_Deque_iterator<_Tp, _Ref, _Ptr> std::operator+(std::ptrdiff_t, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator+(ptrdiff_t __n, const _Deque_iterator<_Tp, _Ref, _Ptr>& __x)
+     ^
+/usr/include/c++/4.8/bits/stl_deque.h:354:5: note:   template argument deduction/substitution failed:
+../ShortPathUnweighted.cpp:60:102: note:   cannot convert ‘*(table + (((sizetype)(((long unsigned int)cell->Cell::CurrentNode->Node::InternalNumber) * 16ul)) + 18446744073709551600u))’ (type ‘Table’) to type ‘std::ptrdiff_t {aka long int}’
+     table[(*nodeIter)->InternalNumber - 1].Distance = table[cell->CurrentNode->InternalNumber - 1] + 1;
+                                                                                                      ^
+make: *** [ShortPathUnweighted.o] Error 1
+21:05:41 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:25:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+../graph.cpp: In function ‘int main()’:
+../graph.cpp:163:66: error: ‘ShortPathUnweightedV2’ was not declared in this scope
+  ShortPathUnweightedV2(table, graph, graph->Cells[0]->CurrentNode);
+                                                                  ^
+make: *** [graph.o] Error 1
+21:06:32 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:07:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./ShortPathUnweighted.o ./graph.o   
+Finished building target: Graph
+ 
+21:07:57 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+make: Nothing to be done for `all'.
+12:50:45 **** Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building file: ../BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"BinaryHeap.d" -MT"BinaryHeap.d" -o "BinaryHeap.o" "../BinaryHeap.c"
+../BinaryHeap.c: In function ‘main’:
+../BinaryHeap.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../BinaryHeap.c
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./BinaryHeap.o ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./graph.o: In function `main':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:130: multiple definition of `main'
+./BinaryHeap.o:/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../BinaryHeap.c:108: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+12:51:48 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"BinaryHeap.d" -MT"BinaryHeap.d" -o "BinaryHeap.o" "../BinaryHeap.c"
+Finished building: ../BinaryHeap.c
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./BinaryHeap.o ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
+12:55:15 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+Finished building: ../PriorityQueue/BinaryHeap.c
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
+14:04:16 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.c:4:0:
+../PriorityQueue/BinaryHeap.h:7:1: error: unknown type name ‘TableEntry’
+ typedef TableEntry ElementType;
+ ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:05:17 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.c:4:0:
+../PriorityQueue/BinaryHeap.h:7:1: error: unknown type name ‘TableEntry’
+ typedef TableEntry ElementType;
+ ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:19:25 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.c:4:0:
+../PriorityQueue/BinaryHeap.h:3:19: fatal error: graph.h: No such file or directory
+ #include "graph.h"
+                   ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:19:38 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.c:4:
+../PriorityQueue/../graph.h:4:18: fatal error: vector: No such file or directory
+ #include <vector>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:20:05 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.c:4:
+../PriorityQueue/../graph.h:4:18: fatal error: vector: No such file or directory
+ #include <vector>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:20:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.c:4:
+../PriorityQueue/../graph.h:4:18: fatal error: string: No such file or directory
+ #include <string>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:21:51 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.c:4:
+../PriorityQueue/../graph.h:4:18: fatal error: vector: No such file or directory
+ #include <vector>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:23:19 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.c"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.c:1:
+../PriorityQueue/../graph.h:4:18: fatal error: vector: No such file or directory
+ #include <vector>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:23:54 **** Clean-only build of configuration Debug for project Graph ****
+make clean 
+rm -rf  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o  ./PriorityQueue/BinaryHeap.d  ./ShortPathUnweighted.d ./ShortPathWeighted.d ./graph.d  Graph
+ 
+14:23:54 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.cpp:1:0:
+../PriorityQueue/BinaryHeap.h:4:17: fatal error: stdio: No such file or directory
+ #include <stdio>
+                 ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:24:09 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:38:61: error: invalid conversion from ‘void*’ to ‘ElementType* {aka Table*}’ [-fpermissive]
+  H->Elements = malloc((MaxElement + 1) * sizeof(ElementType));
+                                                             ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:45:17: error: no match for ‘operator=’ (operand types are ‘ElementType {aka Table}’ and ‘int’)
+  H->Elements[0] = MINIDATA;
+                 ^
+../PriorityQueue/BinaryHeap.cpp:45:17: note: candidate is:
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:35:8: note: Table& Table::operator=(const Table&)
+ struct Table
+        ^
+../PriorityQueue/../graph.h:35:8: note:   no known conversion for argument 1 from ‘int’ to ‘const Table&’
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:24:26 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.cpp:1:0:
+../PriorityQueue/BinaryHeap.h:6:19: fatal error: cmalloc: No such file or directory
+ #include <cmalloc>
+                   ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:24:31 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.cpp:1:0:
+../PriorityQueue/BinaryHeap.h:6:18: fatal error: malloc: No such file or directory
+ #include <malloc>
+                  ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:24:50 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:38:61: error: invalid conversion from ‘void*’ to ‘ElementType* {aka Table*}’ [-fpermissive]
+  H->Elements = malloc((MaxElement + 1) * sizeof(ElementType));
+                                                             ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:45:17: error: no match for ‘operator=’ (operand types are ‘ElementType {aka Table}’ and ‘int’)
+  H->Elements[0] = MINIDATA;
+                 ^
+../PriorityQueue/BinaryHeap.cpp:45:17: note: candidate is:
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:35:8: note: Table& Table::operator=(const Table&)
+ struct Table
+        ^
+../PriorityQueue/../graph.h:35:8: note:   no known conversion for argument 1 from ‘int’ to ‘const Table&’
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:25:11 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.cpp:1:0:
+../PriorityQueue/BinaryHeap.h:5:21: fatal error: cstdlib.h: No such file or directory
+ #include <cstdlib.h>
+                     ^
+compilation terminated.
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:25:16 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:38:61: error: invalid conversion from ‘void*’ to ‘ElementType* {aka Table*}’ [-fpermissive]
+  H->Elements = malloc((MaxElement + 1) * sizeof(ElementType));
+                                                             ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:45:17: error: no match for ‘operator=’ (operand types are ‘ElementType {aka Table}’ and ‘int’)
+  H->Elements[0] = MINIDATA;
+                 ^
+../PriorityQueue/BinaryHeap.cpp:45:17: note: candidate is:
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:35:8: note: Table& Table::operator=(const Table&)
+ struct Table
+        ^
+../PriorityQueue/../graph.h:35:8: note:   no known conversion for argument 1 from ‘int’ to ‘const Table&’
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:25:26 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:38:61: error: invalid conversion from ‘void*’ to ‘ElementType* {aka Table*}’ [-fpermissive]
+  H->Elements = malloc((MaxElement + 1) * sizeof(ElementType));
+                                                             ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:45:17: error: no match for ‘operator=’ (operand types are ‘ElementType {aka Table}’ and ‘int’)
+  H->Elements[0] = MINIDATA;
+                 ^
+../PriorityQueue/BinaryHeap.cpp:45:17: note: candidate is:
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:35:8: note: Table& Table::operator=(const Table&)
+ struct Table
+        ^
+../PriorityQueue/../graph.h:35:8: note:   no known conversion for argument 1 from ‘int’ to ‘const Table&’
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:26:28 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:38:74: error: no matching function for call to ‘Table::Table(void*)’
+  H->Elements = (ElementType)malloc((MaxElement + 1) * sizeof(ElementType));
+                                                                          ^
+../PriorityQueue/BinaryHeap.cpp:38:74: note: candidates are:
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:35:8: note: Table::Table()
+ struct Table
+        ^
+../PriorityQueue/../graph.h:35:8: note:   candidate expects 0 arguments, 1 provided
+../PriorityQueue/../graph.h:35:8: note: Table::Table(const Table&)
+../PriorityQueue/../graph.h:35:8: note:   no known conversion for argument 1 from ‘void*’ to ‘const Table&’
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+14:26:38 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp:1:24: fatal error: BinaryHeap.h: No such file or directory
+ #include "BinaryHeap.h"
+                        ^
+compilation terminated.
+make: *** [ShortPathWeighted.o] Error 1
+14:27:26 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void InitializeVertextQueue(PriorityQueue, Table*)’:
+../ShortPathWeighted.cpp:32:23: error: could not convert ‘priorityQueue’ from ‘PriorityQueue {aka HeapStruct*}’ to ‘ElementType {aka Table}’
+   Insert(priorityQueue)
+                       ^
+../ShortPathWeighted.cpp:33:2: error: expected ‘;’ before ‘}’ token
+  }
+  ^
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+make: *** [ShortPathWeighted.o] Error 1
+14:27:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void InitializeVertextQueue(PriorityQueue, Table*)’:
+../ShortPathWeighted.cpp:32:23: error: could not convert ‘priorityQueue’ from ‘PriorityQueue {aka HeapStruct*}’ to ‘ElementType {aka Table}’
+   Insert(priorityQueue);
+                       ^
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+make: *** [ShortPathWeighted.o] Error 1
+14:30:18 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, unsigned int>(char const*, int, unsigned int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+14:31:20 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, unsigned int>(char const*, int, unsigned int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+14:33:37 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `InitializeNode(std::string, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+14:34:09 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `InitializeNode(std::string, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:14:19 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:15:30 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+./graph.o: In function `InitializeGraph()':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:39: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:50: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:59: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:15:38 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+./graph.o: In function `InitializeGraph()':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:39: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:50: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../graph.cpp:59: undefined reference to `Node* InitializeNode<std::string, unsigned int, int>(std::string, unsigned int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:16:02 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:16:21 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, unsigned int, int>(char const*, unsigned int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:16:49 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
+15:17:38 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, unsigned int, int>(char const*, unsigned int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:18:19 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, unsigned int, int>(char const*, unsigned int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:18:51 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void InintTable(Index, Graph*, Table*)’:
+../ShortPathWeighted.cpp:11:42: error: ‘IndexType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                          ^
+../ShortPathWeighted.cpp:11:65: error: ‘WeightType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                                                 ^
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+make: *** [ShortPathWeighted.o] Error 1
+15:19:20 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void InintTable(Index, Graph*, Table*)’:
+../ShortPathWeighted.cpp:11:42: error: ‘IndexType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                          ^
+../ShortPathWeighted.cpp:11:65: error: ‘WeightType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                                                 ^
+../ShortPathWeighted.cpp: At global scope:
+../ShortPathWeighted.cpp:28:29: error: variable or field ‘InitializeVertextQueue’ declared void
+ void InitializeVertextQueue(PriorityQueue priorityQueue, TableInstance t)
+                             ^
+../ShortPathWeighted.cpp:28:29: error: ‘PriorityQueue’ was not declared in this scope
+../ShortPathWeighted.cpp:28:72: error: expected primary-expression before ‘t’
+ void InitializeVertextQueue(PriorityQueue priorityQueue, TableInstance t)
+                                                                        ^
+make: *** [ShortPathWeighted.o] Error 1
+15:19:31 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void InintTable(Index, Graph*, Table*)’:
+../ShortPathWeighted.cpp:11:42: error: ‘IndexType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                          ^
+../ShortPathWeighted.cpp:11:65: error: ‘WeightType’ was not declared in this scope
+   t[i].ParentNode = InitializeNode("s", (IndexType)NotAVertex, (WeightType)Infinity);
+                                                                 ^
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+make: *** [ShortPathWeighted.o] Error 1
+15:20:13 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:20:53 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:38:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:38:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:12: undefined reference to `Node* InitializeNode<std::string, int, int>(std::string, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:22:25 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:38:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:38:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:12: undefined reference to `Node* InitializeNode<std::string, int, int>(std::string, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:22:53 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:12: undefined reference to `Node* InitializeNode<std::string, int, int>(std::string, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:23:27 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+./ShortPathWeighted.o: In function `InintTable(int, Graph*, Table*)':
+/home/zhuangliu/Git/CPro/Eclipse/Graph/Debug/../ShortPathWeighted.cpp:11: undefined reference to `Node* InitializeNode<char const*, int, int>(char const*, int, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Graph] Error 1
+15:42:01 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:81:1: error: expected initializer before ‘Cell’
+ Cell *InitializeCell();
+ ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+15:42:16 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+In file included from ../PriorityQueue/BinaryHeap.h:3:0,
+                 from ../PriorityQueue/BinaryHeap.cpp:1:
+../PriorityQueue/../graph.h:81:1: error: expected initializer before ‘Cell’
+ Cell *InitializeCell();
+ ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+make: *** [PriorityQueue/BinaryHeap.o] Error 1
+15:42:26 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathUnweighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathUnweighted.d" -MT"ShortPathUnweighted.d" -o "ShortPathUnweighted.o" "../ShortPathUnweighted.cpp"
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweighted(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:26:67: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(table[(*iter)->CurrentNode->InternalNumber - 1].Distance == currentDistance &&
+                                                                   ^
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:33:60: note: in expansion of macro ‘INFINITY’
+      if(table[(*iterNode)->InternalNumber - 1].Distance == INFINITY)
+                                                            ^
+../ShortPathUnweighted.cpp: In function ‘void ShortPathUnweightedV2(Table*, Graph*, Node*)’:
+../ShortPathUnweighted.cpp:4:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+ #define INFINITY 0x8fffffff
+                  ^
+../ShortPathUnweighted.cpp:59:58: note: in expansion of macro ‘INFINITY’
+    if(table[(*nodeIter)->InternalNumber - 1].Distance == INFINITY)
+                                                          ^
+Finished building: ../ShortPathUnweighted.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:8: warning: unused variable ‘v’ [-Wunused-variable]
+  Index v, w;
+        ^
+../ShortPathWeighted.cpp:37:11: warning: unused variable ‘w’ [-Wunused-variable]
+  Index v, w;
+           ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
+17:03:48 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../PriorityQueue/BinaryHeap.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PriorityQueue/BinaryHeap.d" -MT"PriorityQueue/BinaryHeap.d" -o "PriorityQueue/BinaryHeap.o" "../PriorityQueue/BinaryHeap.cpp"
+../PriorityQueue/BinaryHeap.cpp: In function ‘HeapStruct* Initialize(int)’:
+../PriorityQueue/BinaryHeap.cpp:31:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue size is too small!");
+                                            ^
+../PriorityQueue/BinaryHeap.cpp:37:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp:40:23: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("out of space");
+                       ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘void Insert(ElementType, PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:54:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   Error("Priority queue is full");
+                                 ^
+../PriorityQueue/BinaryHeap.cpp: In function ‘ElementType DeleteMin(PriorityQueue)’:
+../PriorityQueue/BinaryHeap.cpp:74:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 Error("Priority queue is empty");
+                                                ^
+Finished building: ../PriorityQueue/BinaryHeap.cpp
+ 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+../ShortPathWeighted.cpp: In function ‘void Dijkstra(Table*, Graph*)’:
+../ShortPathWeighted.cpp:37:12: warning: unused variable ‘w’ [-Wunused-variable]
+  Node *v, *w;
+            ^
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
+17:12:20 **** Incremental Build of configuration Debug for project Graph ****
+make all 
+Building file: ../ShortPathWeighted.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ShortPathWeighted.d" -MT"ShortPathWeighted.d" -o "ShortPathWeighted.o" "../ShortPathWeighted.cpp"
+Finished building: ../ShortPathWeighted.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
 Finished building target: Graph
  

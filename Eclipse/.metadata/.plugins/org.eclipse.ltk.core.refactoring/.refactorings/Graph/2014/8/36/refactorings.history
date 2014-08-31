@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Graph/PriorityQueue/BinaryHeap.c&apos; to &apos;BinaryHeap.cpp&apos;" description="Rename resource &apos;BinaryHeap.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PriorityQueue/BinaryHeap.c" name="BinaryHeap.cpp" stamp="1409466225683" updateReferences="true"/>
+</session>

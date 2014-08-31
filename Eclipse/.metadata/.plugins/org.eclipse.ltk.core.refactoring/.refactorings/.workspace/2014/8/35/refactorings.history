@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Graph/table.h&apos;" deleteContents="false" description="Delete resource &apos;Graph/table.h&apos;" element1="/Graph/table.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1409059451022"/>&#x0A;<refactoring comment="Delete resource &apos;Graph/graphTopoSort.cpp&apos;" deleteContents="false" description="Delete resource &apos;Graph/graphTopoSort.cpp&apos;" element1="/Graph/graphTopoSort.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1409060402749"/>
+</session>

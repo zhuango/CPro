@@ -1,0 +1,45 @@
+#include "PriorityQueue/BinaryHeap.h"
+#include "graph.h"
+#include <stack>
+
+void InintTable(Index start, Graph *g, TableInstance t)
+{
+	for(UInt32 i =0; i <= g->Size; i++)
+	{
+		t[i].Known = false;
+		t[i].Distance = Infinity;
+		t[i].ParentNode = InitializeNode(, (Index)NotAVertex, (Weight)Infinity);
+	}
+	t[start].Distance = 0;
+}
+
+void PrintPath(Index destNode, TableInstance t)
+{
+	stack<Node*> pathStack;
+	Table *tableEntry = &t[destNode];
+
+	while(tableEntry->ParentNode->InternalNumber != NotAVertex)
+	{
+		pathStack.push(tableEntry->ParentNode);
+		tableEntry = &t[tableEntry->ParentNode->InternalNumber];
+	}
+}
+
+void InitializeVertextQueue(PriorityQueue priorityQueue, TableInstance t)
+{
+	for(UInt32 i = 0; i < VertexNumber; i++)
+	{
+		Insert(t[i], priorityQueue);
+	}
+}
+void Dijkstra(TableInstance t, Graph *g)
+{
+	Index v, w;
+
+	PriorityQueue priorityQueue = Initialize(g->Size);
+	priorityQueue->Elements = new ElementType[g->Size];
+
+	for(;;)
+	{
+	}
+}
