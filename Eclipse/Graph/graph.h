@@ -73,7 +73,7 @@ struct Table
 
 #define VertexNumber 8
 #define NotAVertex (-1)
-#define Infinity 0x8FFFFFFF
+#define Infinity 0x8FFF
 
 typedef struct Table TableInstance[VertexNumber];
 
@@ -88,4 +88,9 @@ void TopoSortV2(Graph *g);
 void InitTable(Table table[], int tableSize);
 void ShortPathUnweighted(Table table[], Graph *graph, Node *startNode);
 void ShortPathUnweightedV2(Table table[], Graph *graph, Node *startNode);
+
+void InintTable(Index start, Graph *g, TableInstance t, int sizeOfTable);
+void PrintPath(Index destNode, TableInstance t);
+void Dijkstra(Graph *g, Index start, TableInstance t);
+
 #endif

@@ -121,7 +121,7 @@ void TopoSortV2(Graph *g)
 	}
 }
 
-int main()
+void GraphTest()
 {
 	Graph *graph = InitializeGraph();
 	for(UInt32 b = 0; b < graph->Cells.size(); b++)
@@ -164,5 +164,18 @@ int main()
 	for(UInt32 i = 0; i < graph->Size; i++)
 	{
 		cout << "Distance from " << graph->Cells[i]->CurrentNode->RealName << " : " << table[i].Distance << endl;
+	}
+}
+
+int main()
+{
+	Graph *graph = InitializeGraph();
+
+	TableInstance t;
+	InintTable(mapping["v1"], graph, t, VertexNumber * 3);
+	Dijkstra(graph, mapping["v1"], t);
+	for(int i = 1; i <= graph->Size; i ++)
+	{
+		cout << t[i].CurrentNode->RealName << " " << t[i].Distance << endl;
 	}
 }

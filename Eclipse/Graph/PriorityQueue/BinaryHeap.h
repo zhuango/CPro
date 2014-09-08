@@ -17,7 +17,7 @@ typedef struct HeapStruct
 } HeapStruct;
 //Pointer of Priority Queue
 typedef HeapStruct *PriorityQueue;
-//Initialize with "MaxElements" elements in priotity queue
+//Initialize with "MaxElements" elements in priority queue
 PriorityQueue Initialize(int MaxElements);
 //Destroy the Priority queue
 void Destroy(PriorityQueue H);
@@ -25,10 +25,12 @@ void Destroy(PriorityQueue H);
 void MakeEmpty(PriorityQueue H);
 
 void Insert(ElementType X, PriorityQueue H);
-//Delete minimus element in priority queue.
+//Delete minimum element in priority queue.
 ElementType DeleteMin(PriorityQueue H);
-//Fnd the mininum element in priority queue.
+//Find the minimum element in priority queue.
 ElementType FindMin(PriorityQueue H);
+
+ElementType FindInPriorityQueue(PriorityQueue q, int Distance, Index nodeNumber);
 int IsEmpty(PriorityQueue H);
 int IsFull(PriorityQueue H);
 

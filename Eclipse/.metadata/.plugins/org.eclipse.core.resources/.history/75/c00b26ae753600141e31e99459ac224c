@@ -1,0 +1,153 @@
+#include "BinaryHeap.h"
+
+void Error(char *ErrorMessage)
+{
+	if(ErrorMessage != NULL) {
+		printf("%s\n", ErrorMessage);
+		exit(EXIT_FAILURE);
+	}
+}
+
+int IsEmpty(PriorityQueue H)
+{
+        if(H->Size == 0)
+                return 1;
+        else
+                return 0;
+}
+
+int IsFull(PriorityQueue H)
+{
+        if(H->Size == H->Capacity)
+                return 1;
+        else
+                return 0;
+}
+
+PriorityQueue Initialize(int MaxElement)
+{
+	PriorityQueue H;
+	if(MaxElement < MINQUEUESIZE) {
+		Error("Priority queue size is too small!");
+	}
+
+	//Space alloc.
+	H = (PriorityQueue) malloc(sizeof(PriorityQueue));
+	if(H == NULL)
+		Error("out of space");
+	H->Elements = (ElementType*)malloc((MaxElement + 1) * sizeof(ElementType));
+	if(H->Elements == NULL)
+		Error("out of space");
+
+	//Properties of priority queue.
+	H->Capacity = MaxElement;
+	H->Size = 0;
+	H->Elements[0].Distance = MINIDATA;
+
+	return H;
+}
+
+void Insert(ElementType X, PriorityQueue H)
+{
+	int i;
+	if(IsFull(H)) {
+		Error("Priority queue is full");
+		return ;
+	}
+
+	//First, add a new position(the end) to the priority queue.
+        //compare to its parent, if bigger than parent, then swap position with parent.
+	for(i = ++ H->Size; H->Elements[i / 2] > X; i /= 2)
+		H->Elements[i] = H->Elements[i / 2];
+        //Find the position of the new element.
+	H->Elements[i] = X;
+}
+
+//Deleting of priority queue is special.
+//Always delete the root element
+ElementType DeleteMin(PriorityQueue H)
+{
+        int i, Child = 0;
+        ElementType MinElement, LastElement;
+
+        if(IsEmpty(H)) {
+                Error("Priority queue is empty");
+                return H->Elements[0];
+        }
+
+        MinElement = H->Elements[1];
+        LastElement = H->Elements[H->Size --];
+
+        for(i = 1; i * 2 <= H->Size; i = Child) {
+                //Locate the position of left child.
+                Child = i * 2;
+                //Find smaller child, because there may be a right child.
+                //also, need a swntinel.
+                //who smaller, who up! ^v^!
+                if(Child != H->Size && 
+                                H->Elements[Child + 1] < H->Elements[Child])
+                        Child++;
+                //there are two way to get out the loop :
+                //(1)one is going down to the leaf of heap.
+                //(2)Another is "lastElement" being smaller than current child(the smaller one of two children.)
+                //Swap the positions of "lastElements" and the hole.
+                if(LastElement > H->Elements[Child])
+                        H->Elements[i] = H->Elements[Child];
+                else
+                        break;
+        }
+
+        H->Elements[i] = LastElement;
+        return MinElement;
+}
+
+ElementType FindMin(PriorityQueue H)
+{
+	return H->Elements[0];
+}
+
+ElementType FindInPriorityQueue(PriorityQueue q, int Distance, Index nodeNumber)
+{
+	ElementType &element = FindMin(q);
+	unsigned int a =
+}
+
+/*
+int main(void)
+{
+        int i;
+
+        PriorityQueue H = Initialize(20);
+        Insert(6, H);
+        Insert(7, H);
+        Insert(1, H);
+        Insert(9, H);
+        Insert(5, H);
+        Insert(2, H);
+        Insert(3, H);
+        Insert(8, H);
+        Insert(4, H);
+
+        for(i = 1; i <= H->Size; i++)
+                printf("%d ", H->Elements[i]);
+        printf("\n");
+
+        ElementType min = DeleteMin(H);
+        printf("Min: %d\n", min);
+        for(i = 1; i <= H->Size; i++)
+                printf("%d ", H->Elements[i]);
+        printf("\n");
+        
+        min = DeleteMin(H);
+        printf("Min: %d\n", min);
+        for(i = 1; i <= H->Size; i++)
+                printf("%d ", H->Elements[i]);
+        printf("\n");
+
+        min = DeleteMin(H);
+        printf("Min: %d\n", min);
+        for(i = 1; i <= H->Size; i++)
+                printf("%d ", H->Elements[i]);
+        printf("\n");
+}
+*/

@@ -32,10 +32,10 @@ PriorityQueue Initialize(int MaxElement)
 	}
 
 	//Space alloc.
-	H = (PriorityQueue) malloc(sizeof(PriorityQueue));
+	H = new HeapStruct;
 	if(H == NULL)
 		Error("out of space");
-	H->Elements = (ElementType*)malloc((MaxElement + 1) * sizeof(ElementType));
+	H->Elements = new ElementType[MaxElement + 1];
 	if(H->Elements == NULL)
 		Error("out of space");
 
@@ -100,7 +100,6 @@ ElementType DeleteMin(PriorityQueue H)
         H->Elements[i] = LastElement;
         return MinElement;
 }
-
 /*
 int main(void)
 {
