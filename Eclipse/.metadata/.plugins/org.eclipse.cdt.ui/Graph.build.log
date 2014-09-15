@@ -1,6 +1,26 @@
-20:22:42 **** Incremental Build of configuration Debug for project Graph ****
+22:48:10 **** Incremental Build of configuration Debug for project Graph ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../graph.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"graph.d" -MT"graph.d" -o "graph.o" "../graph.cpp"
+../graph.cpp: In function ‘void djikstraTest()’:
+../graph.cpp:177:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 1; i <= graph->Size; i ++)
+                             ^
+../graph.cpp: In function ‘int main()’:
+../graph.cpp:190:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 1; i <= graph->Size; i ++)
+                             ^
+../graph.cpp:198:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 1; i <= graph->Size; i++)
+                             ^
+Finished building: ../graph.cpp
+ 
+Building target: Graph
+Invoking: GCC C++ Linker
+g++  -o "Graph"  ./PriorityQueue/BinaryHeap.o  ./ShortPathUnweighted.o ./ShortPathWeighted.o ./graph.o   
+Finished building target: Graph
+ 
 
-20:22:42 Build Finished (took 62ms)
+22:48:11 Build Finished (took 559ms)
 

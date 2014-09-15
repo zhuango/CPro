@@ -70,6 +70,12 @@ struct Table
 	}
 };
 
+struct Edge
+{
+	string Node1;
+	string Node2;
+	Weight weight;
+};
 
 #define VertexNumber 8
 #define NotAVertex (-1)
@@ -92,5 +98,6 @@ void ShortPathUnweightedV2(Table table[], Graph *graph, Node *startNode);
 void InintTable(Index start, Graph *g, TableInstance t, int sizeOfTable);
 void PrintPath(Index destNode, TableInstance t);
 void Dijkstra(Graph *g, Index start, TableInstance t);
+void Prim(Graph *g, TableInstance t, Index start);
 
 #endif

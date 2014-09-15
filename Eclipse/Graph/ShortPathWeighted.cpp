@@ -45,7 +45,12 @@ void Dijkstra(Graph *g, Index start, TableInstance t)
 	InitializeVertextQueue(priorityQueue, t);
 	for(;;)
 	{
-		v = DeleteMin(priorityQueue).CurrentNode;
+		do{
+			v = DeleteMin(priorityQueue).CurrentNode;
+			if(v->InternalNumber == NotAVertex)
+				break;
+		}while(t[v->InternalNumber].Known);
+
 		if(v->InternalNumber == NotAVertex || t[v->InternalNumber].Known)
 			break;
 		t[v->InternalNumber].Known = true;
@@ -82,6 +87,39 @@ void WeightedNegative(Graph *g, TableInstance t, Index start)
 					t[(*iter)->InternalNumber].ParentNode = currentNode;
 					queue.push(*iter);
 				}
+		}
+	}
+}
+
+void Prim(Graph *g, TableInstance t, Index start)
+{
+	Node *v;
+
+	PriorityQueue priorityQueue = Initialize(g->Size * 3);
+	InitializeVertextQueue(priorityQueue, t);
+	for(;;)
+	{
+		do{
+			v = DeleteMin(priorityQueue).CurrentNode;
+			if(v->InternalNumber == NotAVertex)
+				break;
+		}while(t[v->InternalNumber].Known);
+
+		if(v->InternalNumber == NotAVertex)
+			break;
+		t[v->InternalNumber].Known = true;
+		list<Node*>::iterator iter = g->Cells[v->InternalNumber - 1]->Children.begin();
+		for(;iter != g->Cells[v->InternalNumber - 1]->Children.end(); iter ++)
+		{
+			if(!t[(*iter)->InternalNumber].Known)
+			{
+				if(t[(*iter)->InternalNumber].Distance > (*iter)->weight)
+				{
+					t[(*iter)->InternalNumber].Distance = (*iter)->weight;
+					t[(*iter)->InternalNumber].ParentNode = v;
+					Insert(t[(*iter)->InternalNumber], priorityQueue);
+				}
+			}
 		}
 	}
 }

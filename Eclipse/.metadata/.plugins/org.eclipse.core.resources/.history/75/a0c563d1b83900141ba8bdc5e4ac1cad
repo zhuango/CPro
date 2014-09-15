@@ -1,0 +1,115 @@
+#include "PriorityQueue/BinaryHeap.h"
+#include "graph.h"
+#include <stack>
+#include <queue>
+
+void InintTable(Index start, Graph *g, TableInstance t, int sizeOfTable)
+{
+	for(int i = 0; i < sizeOfTable; i++)
+	{
+		t[i].Known = false;
+		t[i].Distance = Infinity;
+		if(i > 0 && i <= g->Cells.size())
+		{
+			t[i].CurrentNode = g->Cells[i - 1]->CurrentNode;
+		}
+		t[i].ParentNode = InitializeNode("", NotAVertex, Infinity);
+	}
+	t[start].Distance = 0;
+}
+
+void PrintPath(Index destNode, TableInstance t)
+{
+	stack<Node*> pathStack;
+	Table *tableEntry = &t[destNode];
+
+	while(tableEntry->ParentNode->InternalNumber != NotAVertex)
+	{
+		pathStack.push(tableEntry->ParentNode);
+		tableEntry = &t[tableEntry->ParentNode->InternalNumber];
+	}
+}
+
+void InitializeVertextQueue(PriorityQueue priorityQueue, TableInstance t)
+{
+	for(UInt32 i = 1; i < VertexNumber; i++)
+	{
+		Insert(t[i], priorityQueue);
+	}
+}
+void Dijkstra(Graph *g, Index start, TableInstance t)
+{
+	Node *v;
+
+	PriorityQueue priorityQueue = Initialize(g->Size * 3);
+	InitializeVertextQueue(priorityQueue, t);
+	for(;;)
+	{
+		v = DeleteMin(priorityQueue).CurrentNode;
+		if(v->InternalNumber == NotAVertex || t[v->InternalNumber].Known)
+			break;
+		t[v->InternalNumber].Known = true;
+		list<Node*>::iterator iter = g->Cells[v->InternalNumber - 1]->Children.begin();
+		for(;iter != g->Cells[v->InternalNumber - 1]->Children.end(); iter ++)
+		{
+			if(!t[(*iter)->InternalNumber].Known)
+			{
+				if(t[(*iter)->InternalNumber].Distance > (*iter)->weight + t[v->InternalNumber].Distance)
+				{
+					t[(*iter)->InternalNumber].Distance = (*iter)->weight + t[v->InternalNumber].Distance;
+					t[(*iter)->InternalNumber].ParentNode = v;
+					Insert(t[(*iter)->InternalNumber], priorityQueue);
+				}
+			}
+		}
+	}
+}
+
+void WeightedNegative(Graph *g, TableInstance t, Index start)
+{
+	queue<Node *> queue;
+	queue.push(g->Cells[start - 1]->CurrentNode);
+	while(!queue.empty())
+	{
+		Node* currentNode = queue.front();
+		queue.pop();
+		list<Node*>::iterator iter = g->Cells[currentNode->InternalNumber - 1]->Children.begin();
+		for(; iter != g->Cells[currentNode->InternalNumber - 1]->Children.end(); iter ++)
+		{
+				if(t[(*iter)->InternalNumber].Distance > (*iter)->weight + t[currentNode->InternalNumber].Distance)
+				{
+					t[(*iter)->InternalNumber].Distance = (*iter)->weight + t[currentNode->InternalNumber].Distance;
+					t[(*iter)->InternalNumber].ParentNode = currentNode;
+					queue.push(*iter);
+				}
+		}
+	}
+}
+
+void Prim(Graph *g, TableInstance t, Index start)
+{
+	Node *v;
+
+	PriorityQueue priorityQueue = Initialize(g->Size * 3);
+	InitializeVertextQueue(priorityQueue, t);
+	for(;;)
+	{
+		while((v = DeleteMin(priorityQueue).CurrentNode
+		if(v->InternalNumber == NotAVertex || t[v->InternalNumber].Known)
+			break;
+		t[v->InternalNumber].Known = true;
+		list<Node*>::iterator iter = g->Cells[v->InternalNumber - 1]->Children.begin();
+		for(;iter != g->Cells[v->InternalNumber - 1]->Children.end(); iter ++)
+		{
+			if(!t[(*iter)->InternalNumber].Known)
+			{
+				if(t[(*iter)->InternalNumber].Distance > (*iter)->weight)
+				{
+					t[(*iter)->InternalNumber].Distance = (*iter)->weight;
+					t[(*iter)->InternalNumber].ParentNode = v;
+					Insert(t[(*iter)->InternalNumber], priorityQueue);
+				}
+			}
+		}
+	}
+}

@@ -4,7 +4,6 @@ void Error(char *ErrorMessage)
 {
 	if(ErrorMessage != NULL) {
 		printf("%s\n", ErrorMessage);
-		exit(EXIT_FAILURE);
 	}
 }
 
@@ -43,7 +42,7 @@ PriorityQueue Initialize(int MaxElement)
 	H->Capacity = MaxElement;
 	H->Size = 0;
 	H->Elements[0].Distance = MINIDATA;
-
+	H->Elements[0].CurrentNode = InitializeNode("", NotAVertex, Infinity);
 	return H;
 }
 

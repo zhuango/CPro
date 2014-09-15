@@ -167,7 +167,7 @@ void GraphTest()
 	}
 }
 
-int main()
+void djikstraTest()
 {
 	Graph *graph = InitializeGraph();
 
@@ -177,5 +177,37 @@ int main()
 	for(int i = 1; i <= graph->Size; i ++)
 	{
 		cout << t[i].CurrentNode->RealName << " " << t[i].Distance << endl;
+	}
+}
+
+int main()
+{
+	Graph *graph = InitializeGraph();
+
+	TableInstance t;
+	InintTable(mapping["v1"], graph, t, VertexNumber * 3);
+	Prim(graph, t, mapping["v1"]);
+	for(int i = 1; i <= graph->Size; i ++)
+	{
+		if(t[i].ParentNode->InternalNumber == NotAVertex)
+		{
+			continue;
+		}
+		cout << "<" << t[i].CurrentNode->RealName << ", " << t[i].ParentNode->RealName << ", " << t[i].Distance << ">" << endl;
+	}
+	for(int i = 1; i <= graph->Size; i++)
+	{
+		delete t[i].CurrentNode;
+		delete t[i].ParentNode;
+	}
+	vector<Cell*>::iterator iter = graph->Cells.begin();
+	for(;iter != graph->Cells.end(); iter++)
+	{
+		delete (*iter)->CurrentNode;
+		list<Node*>::iterator iterNode = (*iter)->Children.begin();
+		for(;iterNode != (*iter)->Children.end(); iterNode++)
+		{
+			delete (*iterNode);
+		}
 	}
 }
