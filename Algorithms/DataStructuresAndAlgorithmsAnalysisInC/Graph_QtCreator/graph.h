@@ -1,0 +1,106 @@
+#ifndef _graph_h
+#define _graph_h
+
+#include <vector>
+#include <string>
+#include <list>
+#include <map>
+
+using namespace std;
+
+typedef int Index;
+typedef unsigned UInt32;
+typedef int Weight;
+struct Node
+{
+	Index InternalNumber;
+	string RealName;
+	Weight weight;
+};
+
+struct Cell
+{
+	Node *CurrentNode;
+	list<Node*> Children;
+	UInt32 Indegree;
+	UInt32 TopoNumber;
+};
+
+struct Graph
+{
+	vector<Cell*> Cells;
+	UInt32 Size;
+    UInt32 EdgeNumber;
+};
+
+struct Table
+{
+	bool Known;
+	int Distance;
+	Node *CurrentNode;
+	Node *ParentNode;
+	bool operator > (Table &tableEntry)
+	{
+		if(Distance > tableEntry.Distance)
+			return true;
+		else
+			return false;
+	}
+
+	bool operator < (Table &tableEntry)
+	{
+		if(Distance < tableEntry.Distance)
+			return true;
+		else
+			return false;
+	}
+
+	bool operator <= (Table &tableEntry)
+	{
+		if(Distance <= tableEntry.Distance)
+			return true;
+		else
+			return false;
+	}
+	bool operator >= (Table &tableEntry)
+	{
+		if(Distance >= tableEntry.Distance)
+			return true;
+		else
+			return false;
+	}
+};
+
+struct Edge
+{
+	string Node1;
+	string Node2;
+	Weight weight;
+};
+
+#define VertexNumber 8
+#define NotAVertex (-1)
+#define Infinity 0x8FFF
+
+typedef struct Table *TableInstance;
+
+Node *InitializeNode(string name, Index index, Weight weight);
+
+Cell *InitializeCell();
+Graph *InitializeGraph();
+Cell *GetCellWithZeroIndegree(Graph *g);
+void TopoSortV1(Graph *G);
+void TopoSortV2(Graph *g);
+
+void InitTable(Table table[], int tableSize);
+void ShortPathUnweighted(Table table[], Graph *graph, Node *startNode);
+void ShortPathUnweightedV2(Table table[], Graph *graph, Node *startNode);
+
+void InintTable(Index start, Graph *g, TableInstance t, int sizeOfTable);
+void PrintPath(Index destNode, TableInstance t);
+void InitializeTableForKruskal(Graph *g, TableInstance t);
+void Dijkstra(Graph *g, Index start, TableInstance t);
+void Prim(Graph *g, TableInstance t, Index start);
+void Kruskal(Graph *g, TableInstance t, list<Edge> &edgeList);
+
+#endif
