@@ -7,8 +7,7 @@ typedef struct TreeNode
 {
 	ElementType Data;
 	struct TreeNode *Left;
-	struct TreeNode *Right;
-	unsigned short Height;
+    struct TreeNode *Right;
 }TreeNode;
 
 #endif
